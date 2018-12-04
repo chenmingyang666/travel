@@ -1,10 +1,16 @@
 <template>
-<div>
-	hello vue
-</div>
+  <div>
+     <home-header></home-header>
+  </div>
 </template>
 <script>
-	export	default {
-		name:'Home'
-	}
+import HomeHeader from './components/Header'
+export default {
+  name: 'Home',
+  components:{
+  	HomeHeader
+  },
+  
+}
+
 </script>

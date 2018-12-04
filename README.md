@@ -1,4 +1,5 @@
 # travel
+<<<<<<< HEAD
 
 > A Vue.js project
 
@@ -28,3 +29,6 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+vue 2.5 去哪儿网实战代码
+>>>>>>> e5af7c3bf978c88ce9f968e7015b9cdd568ae81b
