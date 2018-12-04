@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div>
      <home-header></home-header>
   </div>
@@ -14,3 +15,14 @@ export default {
 }
 
 </script>
+=======
+<div>
+	hello vue
+</div>
+</template>
+<script>
+	export	default {
+		name:'Home'
+	}
+</script>
+>>>>>>> 7217d1c8005be74c0295e265c8278a3d6cec250c

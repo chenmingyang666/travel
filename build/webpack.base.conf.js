@@ -40,7 +40,11 @@ module.exports = {
   },
   module: {
     rules: [
+<<<<<<< HEAD
       // ...(config.dev.useEslint ? [createLintingRule()] : []),
+=======
+      ...(config.dev.useEslint ? [createLintingRule()] : []),
+>>>>>>> 7217d1c8005be74c0295e265c8278a3d6cec250c
       {
         test: /\.vue$/,
         loader: 'vue-loader',

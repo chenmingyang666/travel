@@ -82,15 +82,24 @@
     </ul>
   </div>
 </template>
+<<<<<<< HEAD
 <script>
 export default {
   name: 'HelloWorld',
   data() {
+=======
+
+<script>
+export default {
+  name: 'HelloWorld',
+  data () {
+>>>>>>> 7217d1c8005be74c0295e265c8278a3d6cec250c
     return {
       msg: 'Welcome to Your Vue.js App'
     }
   }
 }
+<<<<<<< HEAD
 
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -100,18 +109,36 @@ h2 {
   font-weight: normal;
 }
 
+=======
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+h1, h2 {
+  font-weight: normal;
+}
+>>>>>>> 7217d1c8005be74c0295e265c8278a3d6cec250c
 ul {
   list-style-type: none;
   padding: 0;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7217d1c8005be74c0295e265c8278a3d6cec250c
 li {
   display: inline-block;
   margin: 0 10px;
 }
+<<<<<<< HEAD
 
 a {
   color: #42b983;
 }
 
+=======
+a {
+  color: #42b983;
+}
+>>>>>>> 7217d1c8005be74c0295e265c8278a3d6cec250c
 </style>
