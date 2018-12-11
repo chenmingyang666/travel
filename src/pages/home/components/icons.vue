@@ -57,6 +57,7 @@
 		 		const pages=[]
 		 		this.imgList.forEach((item,index)=>{
 		 			const page=Math.floor(index / 8)
+		 			console.log(page)
 		 			if(!pages[page]){
 		 				pages[page]=[]
 		 			}
@@ -73,6 +74,8 @@
 	.icons >>>.swiper-container
 		height:0
 		padding-bottom:50%
+	.icons
+		margin-top:.1rem	
 		.icon
 			position:relative
 			overflow:hidden
