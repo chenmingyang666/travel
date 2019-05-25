@@ -2,7 +2,7 @@
 	<div>
 		<div class="title">强烈推荐</div>
 			<ul>
-				<li class="item border-bottom" v-for="(item,index) of recommendList" :key="item.id">
+				<li class="item border-bottom" v-for="item of recommends" :key="item.id">
 					 
 						<img class="item-img" :src="item.imgUrl" alt="">
 					 
@@ -19,24 +19,12 @@
 <script>
 	export default{
 		name:'HomeRecommend',
+		props:{
+			recommends:Array
+		},
 		data(){
 			return {
-				recommendList:[{
-					id:'001',
-					imgUrl:'https://m.tuniucdn.com/fb2/t1/G2/M00/CD/C5/Cii-Tlh8mpWIMBb2AJnb_TpuDAEAAGx-AFne7gAmdwV525_w350_h0_c0_t0.jpg',
-                    title:'曼谷-芭提雅-金沙岛6或7日游',
-					desc:'去触摸泰国真正的样子，金沙岛珊瑚岛畅游双岛，升级一晚五星希尔顿，7天行程升级一天自由活动，参与泼水节狂欢'
-				},{
-					id:'002',
-					imgUrl:'https://m.tuniucdn.com/fb2/t1/G2/M00/CD/C5/Cii-Tlh8mpWIMBb2AJnb_TpuDAEAAGx-AFne7gAmdwV525_w350_h0_c0_t0.jpg',
-                    title:'曼谷-芭提雅-金沙岛6或7日游',
-					desc:'去触摸泰国真正的样子，金沙岛珊瑚岛畅游双岛，升级一晚五星希尔顿，7天行程升级一天自由活动，参与泼水节狂欢'
-				},{
-					id:'003',
-					imgUrl:'https://m.tuniucdn.com/fb2/t1/G2/M00/CD/C5/Cii-Tlh8mpWIMBb2AJnb_TpuDAEAAGx-AFne7gAmdwV525_w350_h0_c0_t0.jpg',
-                    title:'曼谷-芭提雅-金沙岛6或7日游',
-					desc:'去触摸泰国真正的样子，金沙岛珊瑚岛畅游双岛，升级一晚五星希尔顿，7天行程升级一天自由活动，参与泼水节狂欢'
-				}]
+				
 			}
 		}
 	}

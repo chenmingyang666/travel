@@ -1,6 +1,6 @@
 <template>
 	<div class="icons">
-	<swiper>
+	<swiper :options="swiperOption" v-if="showSwiper">
      <swiper-slide v-for="(page,index) of pages" :key="index">
          <div class="icon"  v-for="(item,index) of page" :key="index">
 			<div class="icon-img">
@@ -10,52 +10,31 @@
 			<p class="icon-desc">{{item.title}}</p>
 		</div>	
       </swiper-slide>
-    
-      
-  </swiper>
-		 
-		
+  	</swiper>
 	</div>
 </template>
 <script>
 	export default{
 		name:'HomeIcons',
+		props:{
+			icons:Array
+		},
 		 data(){
 		 	return{
-		 		imgList:[{
-		 			imgUrl:'https://m.tuniucdn.com/fb2/t1/G2/M00/94/A9/Cii-T1hmH2yIURNDAAAJyfc0kUYAAGMPAP_79EAAAnh702.png',
-		 			title:'全球wifi'
-		 		},{
-		 			imgUrl:'https://m.tuniucdn.com/fb2/t1/G5/M00/BA/9B/Cii-s1rQQK-IRf8xAAAIOKU8KZoAAFjGAP_93sAAAiF451.png',
-		 			title:'目的地参团'
-		 		},{
-		 			imgUrl:'http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png',
-		 			title:'婚纱旅拍'
-		 		},{
-		 			imgUrl:'https://m3.tuniucdn.com/fb2/t1/G4/M00/2B/43/Cii_J1myMKOIa59DAAAEk3iRAL8AAA1twP_-1UAAASr274.png',
-		 			title:'主题游'
-		 		},{
-		 			imgUrl:'https://m.tuniucdn.com/fb2/t1/G1/M00/56/A5/Cii-U1iFo6eIaZs0AAAGZNY4WVMAAHINQP_-V8AAAah882.png',
-		 			title:'目的地大全'
-		 		},{
-		 			imgUrl:'https://m.tuniucdn.com/fb2/t1/G1/M00/84/64/Cii-U1ir_DyIWjOQAAAMzJwlIzUAAHmAQP_8xsAAAzl573.png',
-		 			title:'蜜月游'
-		 		},{
-		 			imgUrl:'https://m.tuniucdn.com/fb2/t1/G1/M00/56/7D/Cii9EViFfe2IVXYOAAAJ0Vcji84AAHIGQP_9XMAAAqN711.png',
-		 			title:'海岛游'
-		 		},{
-		 			imgUrl:'https://m4.tuniucdn.com/fb2/t1/G5/M00/B5/4B/Cii-tFrMg4CINw_XAAAFOVqbjXkAAFafgP_-qYAAAVa328.png',
-		 			title:'当季热玩'
-		 		},{
-		 			imgUrl:'https://m.tuniucdn.com/fb2/t1/G2/M00/F3/1C/Cii-T1iULIKIW6kBAAAFJJmHzD4AAG8NwP_-sIAAAU-443.png',
-		 			title:'旅游百货'
-		 		}]
+		 	swiperOption:{
+					
+					autoplay:false
+				}	
 		 	}
 		 },
 		 computed:{
+			
+			showSwiper(){
+				return this.icons.length
+			},
 		 	pages (){
 		 		const pages=[]
-		 		this.imgList.forEach((item,index)=>{
+		 		this.icons.forEach((item,index)=>{
 		 			const page=Math.floor(index / 8)
 		 			console.log(page)
 		 			if(!pages[page]){
